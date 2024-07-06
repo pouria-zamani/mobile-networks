@@ -1,0 +1,21 @@
+...
+
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+<uses-permission android:name="android.permission.READ_SMS" />
+<uses-permission android:name="android.permission.SEND_SMS" />
+<uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+        ....
+
+<receiver
+android:name=".MyReceiver"
+android:enabled="true"
+android:exported="true">
+<intent-filter>
+    <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+</intent-filter>
+
+</receiver>
+        </application>
+
+        </manifest>
